@@ -17,7 +17,8 @@ life.dll file sits in. Once located, type __*dotnet life.dll*__ into the command
 the program, as it will run using default parameters. 
 
 
-### RUNNING LIFE WITH CUSTOM PARAMETERS
+### Running Life With Custom Parameters
+
 The game of life has multiple parameters which are customizable to provide different experiences and simulations.
 These parameters can be changed by typing __*--{flag-name} {parameters}*__ after __*dotnet life.dll*__ in the command 
 prompt (making one long command).
@@ -53,31 +54,30 @@ to the grid in future generations as it has reached a full steady-state. If the 
 every 2nd or n-th generation the same grid layout will be seen. 
 
 
-
 ## Customizable Parameters
 
--=+=- ROW AND COLUMN DIMENSIONS -=+=-
+### Row and Column Dimensions
 
-Usage: --dimensions <rows> <columns>
+__Usage:__ __*--dimensions {rows} {columns}*__
 
-The --dimensions parameter allows you to alter the size of the grid which is used to simulate the game of life.
+The __*--dimensions*__ parameter allows you to alter the size of the grid which is used to simulate the game of life.
 The flag must be followed by two parameters, the first specifying the number of rows and the second specifying
-the number of columns. Note that both number of rows and columns must be a number BETWEEN 4 and 48 (inclusive).
+the number of columns. Note that both number of rows and columns must be a number __BETWEEN 4 and 48 (inclusive)__.
 
-Default values: The game board will have 16 rows and 16 columns
+__Default values:__ The game board will have 16 rows and 16 columns
 
-Accepted values: Two integers between 4 and 48 (inclusive)
+__Accepted values:__ Two integers between 4 and 48 (inclusive)
 
-*** PLEASE NOTE ***
-It is highly recommended that the --dimensions flag is used before any other flags to assist other argument checking
+__** PLEASE NOTE **__
+It is highly recommended that the __*--dimensions*__ flag is used before any other flags to assist other argument checking
 software in checking if the user specified values are valid.
 
 
--=+=- PERIOIDIC BEHAVIOUR -=+=-
+### Periodic Behaviour
 
-Usage: --periodic
+__Usage:__ __*--periodic*__
 
-Whether the game board acts in a periodic manner may be specified using the --periodic option. This flag does not 
+Whether the game board acts in a periodic manner may be specified using the __*--periodic*__ option. This flag does not 
 require any following parameters, as it is a boolean (either it's on or it's not). Periodic behaviour can be
 described as the "wrapping around" of the board, so a cell that exists on the boundary of the universe (or grid)
 will have neighbours that "wrap around" to the other side of the universe. As defualt, the periodic behaviour is
