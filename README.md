@@ -1,35 +1,29 @@
 ---
-title: Conway's Game of Life Simulator - Version 2.0
-author: Zac Wolter - n10471227
-date: 25/10/2020
+Title: Conway's Game of Life Simulator - Version 2.0
+Author: Zac Wolter - n10471227
+Date: 25/10/2020
 ---
 
-## Build Instructions
+# Build Instructions
 
-To get to this readme file, you would've already downloaded the entire zipped file and possibly unzipped it - if you 
-haven't already unzipped the folder, please do that by right clicking on the zipped folder and click "extract all".
-Select the directory in which you would like to create a copy of the folder and contents and click "extract".
-
-**NOTE: it is 100% necessary to unzip the folder as it will create issues when building the program.
-
-Once this has been done, please navigate into the first "Life" folder, which should contain two folders, one named
-"Life" and another named "Display", as well as a .sln file. Please open the .sln file in Microsoft Visual Studio.
+Please navigate into the first "Life" folder, which should contain two folders, one named "Life" and another named "Display", 
+as well as a .sln file. Please open the .sln file in Microsoft Visual Studio.
 
 Upon opening the file in Visual Studio, you may take a look at the code (and alter if you wish, however, beware that
 it could break the program and not allow you to build it). Once you are ready to build the program, click on the button
 at the top of the screen which a green arrow that says "Life". This button will build the program for you, and you 
 will find the built "life.dll" file within the Life/Life/bin/Debug/netcoreapp3.1 directory in the extracted folder.
 
-## Usage 
+# Usage 
 
-*** WINDOWS USAGE METHOD ***
+### Windows Usage Method
 
-Open command prompt and use the cd command (formatting: cd <filePath>) to navigate to the folder which the built 
-life.dll file sits in. Once located, type "dotnet life.dll" into the command prompt and feel free to immediately run
+Open command prompt and use the cd command (formatting: __*cd {your-file-path}*__) to navigate to the folder which the built 
+life.dll file sits in. Once located, type __*dotnet life.dll*__ into the command prompt and feel free to immediately run
 the program, as it will run using default parameters. 
 
 
-[ --- RUNNING LIFE WITH CUSTOM PARAMETERS --- ]
+#### RUNNING LIFE WITH CUSTOM PARAMETERS
 The game of life has multiple parameters which are customizable to provide different experiences and simulations.
 These parameters can be changed by typing --<flagName> <parameters> after typing life.dll in the command prompt, and
 the command prompt will tell you if it was successful in reading and altering the parameters. 
