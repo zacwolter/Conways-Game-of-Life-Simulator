@@ -69,6 +69,7 @@ __Default values:__ The game board will have 16 rows and 16 columns
 __Accepted values:__ Two integers between 4 and 48 (inclusive)
 
 __** PLEASE NOTE **__
+
 It is highly recommended that the __*--dimensions*__ flag is used before any other flags to assist other argument checking
 software in checking if the user specified values are valid.
 
@@ -83,23 +84,23 @@ described as the "wrapping around" of the board, so a cell that exists on the bo
 will have neighbours that "wrap around" to the other side of the universe. As defualt, the periodic behaviour is
 turned off.
 
-Default value: N/A
+__Default value:__ N/A
 
 
--=+=- RANDOM FACTOR -=+=-
+### Random Factor
 
-Usage: --random <probability>
+__Usage:__ __*--random {probability}*__
 
-If no seed is specified, you can change the probability of any cell to be initially active using the --random option.
+If no seed is specified, you can change the probability of any cell to be initially active using the __*--random*__ option.
 This flag needs to be followed by a single parameter - probability, specified as a decimal value between 0 (0% chance
 of being initially active) and 1 (100% chance of being initially active) (inclusive).
 
-Default value: 0.5 (50%)
+__Default value:__ 0.5 (50%)
 
 
--=+=- INPUT FILE (SEEDS) -=+=-
+### Input File (Seeds)
 
-Usage: --seed <filePath>
+__Usage: *--seed {file-path}*__
 
 The path of the file representing the intial game state may be specified using the --seed option. This flag should be
 followed by a single parameter - the file provided must use a .seed file extension, otherwise it will NOT be accepted
@@ -108,55 +109,57 @@ the <filename>.seed, whereas if the file is located anywhere else, it is highly 
 path, starting from the drive (e.g. D:/Documents/Life/Seeds/<filename>.seed). The command line interface will tell you
 if the file has been found in the location specified and if so, will use the seed to set the intial state of the game.
 
-*** PLEASE NOTE ***
+__** PLEASE NOTE **__
+
 If the seed file contains cells that are outside of the boundaries (either the default boundaries or those set by the 
 user), the game will produce a warning after pressing space to begin the simulation, giving you the option to press
 escape to leave the game and alter the dimensions of the board, or proceed with the simulation, where the values of 
 cells specified outside the boundaries will not be included. It is important to note that this will most likely affect
 the game and how the simulation plays out compared to the full seed being within the boundaries.
 
-Default value: N/A
+__Default value:__ N/A
 
 
--=+=- GENERATIONS -=+=-
+### Generations
 
-Usage: --generations <number>
+__Usage: *--generations {number}*__
 
-The number of generations in the game may be specified using the --generations option. This flag needs to be followed 
+The number of generations in the game may be specified using the __*--generations*__ option. This flag needs to be followed 
 by a single parameter, which should be a positive non-zero integer. The more generations specified, the longer the 
 game will last for. 
 
-Default value: 50
+__Default value:__ 50
 
-Accepted values: positive non-zero integers (e.g. any number that isn't a decimal and higher than 0)
+__Accepted values:__ positive non-zero integers (e.g. any number that isn't a decimal and higher than 0)
 
 
--=+=- MAXIMUM UPDATE RATE -=+=-
+### Maximum Update Rate
 
-Usage: --max-update <updatesPerSecond>
+__Usage: *--max-update {updatesPerSecond}*__
 
-The maximum number of generational updates per second may be specified using the --max-update option. This flag needs 
+The maximum number of generational updates per second may be specified using the __*--max-update*__ option. This flag needs 
 to be followed by a single parameter that must be a float between 1 and 30 (inclusive). Increasing the maximum update 
 rate will speed up the simulation and create a smoother animation, however, you can miss the smaller details within 
 each generation.
 
-*** PLEASE NOTE ***
+__** PLEASE NOTE **__
+
 If step mode is enabled by the user, the maximum update rate will default to 0, as it has no use in that situation.
 
-Default value: 5 updates per second
+__Default value:__ 5 updates per second
 
-Accepted values: Any float (decimal) value between 1 and 30 (inclusive).
+__Accepted values:__ Any float (decimal) value between 1 and 30 (inclusive).
 
 
--=+=- STEP MODE -=+=-
+### Step Mode
 
-Usage: --step
+__Usage: *--step*__
 
-Using the --step option will enable the step feature, where the program will wait for the user to press the space bar
+Using the __*--step*__ option will enable the step feature, where the program will wait for the user to press the space bar
 to progress to the next generation. This mode can be useful when testing the program for faults or for better
 clarification on how the game works.
 
-Default value: The program will NOT run in step mode.
+__Default value:__ The program will NOT run in step mode.
 
 
 -=+=- NEIGHBOURHOODS -=+=-
