@@ -17,7 +17,7 @@ life.dll file sits in. Once located, type __*dotnet life.dll*__ into the command
 the program, as it will run using default parameters. 
 
 
-#### RUNNING LIFE WITH CUSTOM PARAMETERS
+### RUNNING LIFE WITH CUSTOM PARAMETERS
 The game of life has multiple parameters which are customizable to provide different experiences and simulations.
 These parameters can be changed by typing __*--{flag-name} {parameters}*__ after __*dotnet life.dll*__ in the command 
 prompt (making one long command).
@@ -31,29 +31,30 @@ If you recieve a warning regarding cells in the seed file being out of the bound
 (__*--seed*__) parameter information for further information.
 
 There are two ways in which the simulation may end:
-    1. The simulation will detect a steady-state (this can vary from an empty grid, to 0 changes in cells between
-        generations or a looping/oscillating scenario)
+
+1. The simulation will detect a steady-state (this can vary from an empty grid, to 0 changes in cells between
+generations or a looping/oscillating scenario)
+        
+OR
     
-    -- OR --
+2. The simulation will reach the specified number of generations (either the default 50 generations if you don't 
+specify a number of generations or the number of generations you specify before starting the game)
 
-    2. The simulation will reach the specified number of generations (either 50 generations if you don't specify a 
-        number of generations or the number of generations you specify before starting the game)
+Once the game has ended, simply press the space bar once more to end the simulation and return to the command prompt, 
+where the game will tell you what the periodicity of the simulation was (this will only occur if the simulation reaches 
+a steady-state before reaching the number of generations).
 
-Once the game has completed the game of life, simply press the space bar once more to end the simulation and return
-to the command prompt, where the game will tell you what the periodicity of the simulation was (only if the simulation
-reaches a steady-state before reaching the number of generations).
-
-[ --- PERIODICITY EXPLAINED --- ]
-For those who want to understand what the periodicity is, it is simply the number of generations between a particular
-generation and the final one (both of which will be the same). If the periodicity is equal to 0, that means that an
-empty grid was detected, meaning the simulation will no longer have any changes in future generations. If the 
-periodicity is greater than 0, it means that there is a loop where the same generation grid occurs every n generations.
-For example, if the periodicity is equal to 1, there will be no changes to the grid in future generations as it has
-reached a full steady-state. If the periodicity is equal to 2 or greater, then every 2nd or n-th generation the same
-grid layout will be seen. 
+#### Periodicity
+Periodicity is simply the number of generations between a particular generation and the final one (both of which will be 
+the same). If the periodicity is equal to 0, that means that an empty grid was detected, meaning the simulation will no 
+longer have any changes in future generations. If the periodicity is greater than 0, it means that there is a loop where 
+the same generation grid occurs every n generations. For example, if the periodicity is equal to 1, there will be no changes
+to the grid in future generations as it has reached a full steady-state. If the periodicity is equal to 2 or greater, then 
+every 2nd or n-th generation the same grid layout will be seen. 
 
 
-*** The customizable parameters available include: ***
+
+## Customizable Parameters
 
 -=+=- ROW AND COLUMN DIMENSIONS -=+=-
 
