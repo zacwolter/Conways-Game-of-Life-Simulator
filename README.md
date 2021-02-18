@@ -8,6 +8,11 @@ it could break the program and not allow you to build it). Once you are ready to
 at the top of the screen which a green arrow that says "Life". This button will build the program for you, and you 
 will find the built "life.dll" file within the Life/Life/bin/Debug/netcoreapp3.1 directory in the extracted folder.
 
+# Disclaimer
+
+The folder labelled __*"Display"*__ was not created by me and was given as a resource to work with and integrate into the program.
+All credit goes to Benjamin Lewis for creating the display program and classes.
+
 # Usage 
 
 ### Windows Usage Method
@@ -207,7 +212,7 @@ __Accepted values:__ The value must be an integer between 4 and 512 (inclusive).
 
 ## Output File
 
-__Usage: *--output {file-name/path}
+__Usage: *--output {file-name/path}*__
 
 The path of the output file may be specified using the __*--output*__ option. This flag should be followed by a 
 single parameter.
