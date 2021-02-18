@@ -1,5 +1,7 @@
 # Build Instructions
 
+Once the source code zip folder has been downloaded, make sure to extract all contents to a location of your choice.
+
 Please navigate into the first "Life" folder, which should contain two folders, one named "Life" and another named "Display", 
 as well as a .sln file. Please open the .sln file in Microsoft Visual Studio.
 
