@@ -1,9 +1,3 @@
----
-Title: Conway's Game of Life Simulator - Version 2.0
-Author: Zac Wolter - n10471227
-Date: 25/10/2020
----
-
 # Build Instructions
 
 Please navigate into the first "Life" folder, which should contain two folders, one named "Life" and another named "Display", 
@@ -25,16 +19,16 @@ the program, as it will run using default parameters.
 
 #### RUNNING LIFE WITH CUSTOM PARAMETERS
 The game of life has multiple parameters which are customizable to provide different experiences and simulations.
-These parameters can be changed by typing --<flagName> <parameters> after typing life.dll in the command prompt, and
-the command prompt will tell you if it was successful in reading and altering the parameters. 
+These parameters can be changed by typing __*--{flag-name} {parameters}*__ after __*dotnet life.dll*__ in the command 
+prompt (making one long command).
 
 Once all chosen parameters have been specified, simply press the enter button to start the game, where you will be
 notified in green, yellow and red messages whether or not the specified parameters were correctly and successfully
 loaded into the game. Finally, the game will display all the final parameters which the game will use to simulate
 life. Simply press the space bar to continue and begin the simulation.
 
-If you recieve a warning regarding cells in the seed file being out of the boundaries, refer to the INPUT FILE (--seed)
-parameter information for further information.
+If you recieve a warning regarding cells in the seed file being out of the boundaries, refer to the __INPUT FILE__ 
+(__*--seed*__) parameter information for further information.
 
 There are two ways in which the simulation may end:
     1. The simulation will detect a steady-state (this can vary from an empty grid, to 0 changes in cells between
