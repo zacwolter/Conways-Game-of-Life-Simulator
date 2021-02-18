@@ -10,8 +10,8 @@ will find the built "life.dll" file within the Life/Life/bin/Debug/netcoreapp3.1
 
 # Disclaimer
 
-The folder labelled __*"Display"*__ was not created by me and was given as a resource to work with and integrate into the program.
-All credit goes to Benjamin Lewis for creating the display program and classes.
+The folder labelled __*"Display"*__ and all files associated within it were not created by me and was given as a resource 
+to work with and integrate into the program. All credit goes to Benjamin Lewis for creating the display program and classes.
 
 # Usage 
 
