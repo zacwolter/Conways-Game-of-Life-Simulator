@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Life": {
+      "commandName": "Project",
+      "commandLineArgs": "--seed D:\\Documents\\Seeds\\targt_16x16.seed"
+    }
+  }
+}

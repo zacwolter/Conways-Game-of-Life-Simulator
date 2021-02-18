@@ -1,0 +1,17 @@
+#version=2.0
+(o) cell : 0, 10
+(o) cell : 0, 11
+(o) cell : 1, 10
+(o) cell : 1, 11
+(o) cell : 9, 10
+(o) cell : 10, 9
+(o) cell : 10, 11
+(o) cell : 11, 2
+(o) cell : 11, 3
+(o) cell : 11, 9
+(o) cell : 11, 11
+(o) cell : 12, 1
+(o) cell : 12, 4
+(o) cell : 12, 10
+(o) cell : 13, 2
+(o) cell : 13, 3
