@@ -45,7 +45,8 @@ Once the game has ended, simply press the space bar once more to end the simulat
 where the game will tell you what the periodicity of the simulation was (this will only occur if the simulation reaches 
 a steady-state before reaching the number of generations).
 
-#### Periodicity
+## Periodicity
+
 Periodicity is simply the number of generations between a particular generation and the final one (both of which will be 
 the same). If the periodicity is equal to 0, that means that an empty grid was detected, meaning the simulation will no 
 longer have any changes in future generations. If the periodicity is greater than 0, it means that there is a loop where 
@@ -54,9 +55,9 @@ to the grid in future generations as it has reached a full steady-state. If the 
 every 2nd or n-th generation the same grid layout will be seen. 
 
 
-## Customizable Parameters
+# Customizable Parameters
 
-### Row and Column Dimensions
+## Row and Column Dimensions
 
 __Usage:__ __*--dimensions {rows} {columns}*__
 
@@ -74,7 +75,7 @@ It is highly recommended that the __*--dimensions*__ flag is used before any oth
 software in checking if the user specified values are valid.
 
 
-### Periodic Behaviour
+## Periodic Behaviour
 
 __Usage:__ __*--periodic*__
 
@@ -87,7 +88,7 @@ turned off.
 __Default value:__ N/A
 
 
-### Random Factor
+## Random Factor
 
 __Usage:__ __*--random {probability}*__
 
@@ -98,7 +99,7 @@ of being initially active) and 1 (100% chance of being initially active) (inclus
 __Default value:__ 0.5 (50%)
 
 
-### Input File (Seeds)
+## Input File (Seeds)
 
 __Usage: *--seed {file-path}*__
 
@@ -120,7 +121,7 @@ the game and how the simulation plays out compared to the full seed being within
 __Default value:__ N/A
 
 
-### Generations
+## Generations
 
 __Usage: *--generations {number}*__
 
@@ -133,7 +134,7 @@ __Default value:__ 50
 __Accepted values:__ positive non-zero integers (e.g. any number that isn't a decimal and higher than 0)
 
 
-### Maximum Update Rate
+## Maximum Update Rate
 
 __Usage: *--max-update {updatesPerSecond}*__
 
@@ -151,7 +152,7 @@ __Default value:__ 5 updates per second
 __Accepted values:__ Any float (decimal) value between 1 and 30 (inclusive).
 
 
-### Step Mode
+## Step Mode
 
 __Usage: *--step*__
 
@@ -161,72 +162,71 @@ clarification on how the game works.
 
 __Default value:__ The program will NOT run in step mode.
 
+## Neighbourhoods
 
--=+=- NEIGHBOURHOODS -=+=-
+__Usage: *--neighbour {type} {order} {centre-count}*__
 
-Usage: --neighbour <type> <order> <centre-count>
-
-The type and size of the neighbourhood to be used may be specified using the --neighbour flag. The flag must be
+The type and size of the neighbourhood to be used may be specified using the __*--neighbour*__ flag. The flag must be
 followed by three parameters, the first specifying the neighbourhood type, the second specifying order (size) of
 the neighbourhood, and the third specifying whether the centre of the neighbourhood is counted as a neighbour or not.
 
-Defaults: The game will use a 1st order Moore neighbourhood that doesn't count the centre.
+__Defaults:__ The game will use a 1st order Moore neighbourhood that doesn't count the centre.
 
-Accepted values: the neighbourhood type must be one of two strings, either "moore" or "vonNeumann", CASE SENSITIVE.
+__Accepted values:__ the neighbourhood type must be one of two strings, either "moore" or "vonNeumann", __CASE SENSITIVE.__
 The order must be an integer between 1 and 10 (inclusive) and less than half of the smallest dimensions (rows or 
 columns). Whether the centre is counted must be a boolean (true or false).
 
 
--=+=- SURVIVAL AND BIRTH -=+=-
+## Survival and Birth
 
-Usage: --survival <param1> <param2> <param3> ... --birth <param1> <param2> <param3> ...
+__Usage: *--survival {param1} {param2} {param3} ... --birth {param1} {param2} {param3} ...*__
 
 The number of live neighbours required for a cell to survive or be born in evolution may be specified using the 
---survival and --birth options respectively. These flags should be followed by an artbitrary number of parameters
+__*--survival*__ and __*--birth*__ options respectively. These flags should be followed by an artbitrary number of parameters
 (greater than or equal to 0).
 
-Defaults: Either 2 or 3 live neighbours are required for a cell to survive. Exactly 3 live neighbours are required for
+__Defaults:__ Either 2 or 3 live neighbours are required for a cell to survive. Exactly 3 live neighbours are required for
 a cell to be born.
 
-Accepted values: Each parameter must be a single integer, or two integers separated by ellipses (...). Integers 
+__Accepted values:__ Each parameter must be a single integer, or two integers separated by ellipses (...). Integers 
 separated by ellipses represent all number within that range (inclusively). The numbers provided must be less 
 than or equal to the number of neighbouring cells and non-negative.
 
 
--=+=- GENERATIONAL MEMORY -=+=-
+## Generational Memory
 
-Usage: --memory <number>
+__Usage: *--memory {number}*__
 
-The number of generations stored in memory for the detection of a steady-state may be specified using the --memory 
+The number of generations stored in memory for the detection of a steady-state may be specified using the __*--memory*__ 
 option. This flag should be followed by a single parameter.
 
-Defaults: The program stores 16 generations for detecting a steady-state.
+__Defaults:__ The program stores 16 generations for detecting a steady-state.
 
-Accepted values: The value must be an integer between 4 and 512 (inclusive).
+__Accepted values:__ The value must be an integer between 4 and 512 (inclusive).
 
 
--=+=- OUTPUT FILE -=+=-
+## Output File
 
-Usage: --output <filename/path>
+__Usage: *--output {file-name/path}
 
-The path of the output file may be specified using the --output option. This flag should be followed by a 
+The path of the output file may be specified using the __*--output*__ option. This flag should be followed by a 
 single parameter.
 
-Defaults: No output file is used.
+__Defaults:__ No output file is used.
 
-Accepted values: The value must be a vaild or absolute or relative file path with the .seed file extension.
-
-
--=+=- GHOST MODE -=+=-
-
-Usage: --ghost
-
-Whether the program will render the game using ghost mode may be specified using the --ghost option.
-
-Defaults: The program wil NOT run in ghost mode.
+__Accepted values:__ The value must be a vaild or absolute or relative file path with the .seed file extension.
 
 
-## Notes 
+## Ghost Mode
+
+__Usage: *--ghost*__
+
+Whether the program will render the game using ghost mode may be specified using the __*--ghost*__ option.
+
+__Defaults:__ The program wil NOT run in ghost mode.
+
+
+# Notes 
 
 The simulation and all aspects of the game have been thoroughly tested and I believe most, if not all possible errors
 or bugs have been accounted for and dealt with, whilst providing the user with helpful and informative error messages
